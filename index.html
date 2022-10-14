@@ -13,18 +13,52 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/055914e539.js" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
 </head>
 <body>
-    <ul>
+    <ul class="header">
         <li id="title">Wordle</li>
         <li><button id="reload" onclick="reload()"><i class="fa-solid fa-rotate-right"></i><span class="play">Play again</span></button></li>
     </ul>
     <hr>
     <br>
-    <div id="board"></div>
+    <div class="main">
+        <div id="rules">
+            <h2>How To Play</h2>
+            <ul><h3>Guess the Wordle in 6 tries.</h3>
+                <li>Each guess must be a valid 5-letter word.</li>
+                <li>The color of the tiles will change to show how close <span class="space">your guess was to the word.</span></li>
+            </ul>
+            <h4>Examples</h4>
+            <div class="weary">
+                <span id="correct-letter">W</span>
+                <span>E</span>
+                <span>A</span>
+                <span>R</span>
+                <span>Y</span>
+            </div>
+            <p><b>W</b> is in the word and in the correct spot.</p>
+            <div class="pills">
+                <span>P</span>
+                <span id="present-letter">I</span>
+                <span>L</span>
+                <span>L</span>
+                <span>S</span>
+            </div>
+            <p><b>I</b> is in the word but in the wrong spot.</p>
+            <div class="vague">
+                <span>V</span>
+                <span>A</span>
+                <span>G</span>
+                <span id="absent-letter">U</span>
+                <span>E</span>
+            </div>
+            <p><b>U</b> is not in the word in any spot.</p>
+        </div>
+        <div id="board"></div>
+    </div>
     <br>
     <h1 id="answer"></h1>
 </body>
