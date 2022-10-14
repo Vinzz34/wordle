@@ -284,3 +284,23 @@ h4{
       transform: translate3d(4px, 0, 0);
     }
 }
+
+@media screen and (max-width: 1280px) {
+    #rules{
+        visibility: hidden;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    .key-tile{
+        width: 30px;
+
+    }
+    .enter-key-tile{
+        width: 64px;
+    }
+    .keyboard-row{
+        max-width: 340px;
+    }
+}
