@@ -1,0 +1,31 @@
+<!--This is a Wordle Game.-->
+<!--To Know the rules of the Game Please visit the official site https://www.nytimes.com/games/wordle/index.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/055914e539.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</head>
+<body>
+    <ul>
+        <li id="title">Wordle</li>
+        <li><button id="reload" onclick="reload()"><i class="fa-solid fa-rotate-right"></i><span class="play">Play again</span></button></li>
+    </ul>
+    <hr>
+    <br>
+    <div id="board"></div>
+    <br>
+    <h1 id="answer"></h1>
+</body>
+</html>

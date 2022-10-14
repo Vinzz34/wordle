@@ -1,0 +1,216 @@
+:root{
+    --bgcolor:#121213;
+    --fontcolor:#ffffff;
+    --bordercolor:#3c3c3c;
+    --bgbordercolor:#3c3c3c;
+    --green: #538d4e;
+    --yellow: #b59f3b;
+}   
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bgcolor);
+    animation: load 2s;
+}
+
+ul{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+li{
+    display: flex;
+}
+
+li:last-child{
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+
+#title{
+    color: var(--fontcolor);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 36px;
+}
+
+#reload{
+    border: none;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 18px;
+    color: white;
+    background-color: #6aaa64;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+#reload:hover{
+    cursor: pointer;
+    background-color: #579451;
+}
+
+.play{
+    margin-left: 10px;
+}
+
+hr{
+    border-color: var(--bordercolor);
+}
+
+#board{
+    max-width: 350px;
+    height: 420px;
+    margin: auto;
+    margin-top: 3px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile{
+    border: 2px solid var(--bordercolor);
+    width: 60px;
+    height: 60px;
+    margin: 2.5px;
+
+    color: var(--fontcolor);
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: load 2s;
+}
+
+.correct{
+    background-color: var(--green);
+    color: #ffffff;
+    border-color: var(--bgcolor);
+    animation: fade-in 1s;
+}
+
+.present{
+    background-color: var(--yellow);
+    color: #ffffff;
+    border-color: var(--bgcolor);
+    animation: fade-in 1s;
+}
+
+.absent{
+    background-color: var(--bgbordercolor);
+    color: #ffffff;
+    border-color: var(--bgcolor);
+    animation: fade-in 1s;
+}
+
+
+#answer{
+    color: var(--fontcolor);
+    width: 350px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: var(--bordercolor);
+}
+
+.win{
+    animation: win-ani 1s;
+    animation-fill-mode: forwards;
+}
+
+.loss{
+    animation: loss-ani 1s;
+    animation-fill-mode: forwards;
+}
+
+.shake{
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+}
+
+
+.keyboard-row{
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.key-tile{
+    border: 1px solid var(--bordercolor);
+    width: 36px;
+    height: 40px;
+    margin: 1px;
+
+    color: var(--fontcolor);
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: load 2s;
+}
+ 
+.enter-key-tile{
+    border: 1px solid var(--bordercolor);
+    width: 76px;
+    height: 40px;
+    margin: 1px;
+
+    color: var(--fontcolor);
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: load 2s;
+}
+
+
+/* animations */
+
+@keyframes load{
+    0% {transform: scale(0,0);}
+    100%    {transform: scale(1,1);}
+}
+
+@keyframes fade-in{
+    0% {transform: scale(0,0);}
+    100%    {transform: scale(1,1);}
+}
+
+@keyframes win-ani{
+    0%    {transform: scale(0,0); color: var(--fontcolor);}
+    100%    {transform: scale(1,1); color: var(--green); width: 120px;}
+}
+
+@keyframes loss-ani{
+    0%    {transform: scale(0,0); color: var(--fontcolor);}
+    100%    {transform: scale(1,1); color: var(--yellow); width: 120px;}
+}
+
+@keyframes shake-ani {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+      color: var(--fontcolor);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+      color: var(--fontcolor);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+}
