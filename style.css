@@ -295,8 +295,12 @@ h4{
 @media screen and (max-width: 450px) {
     .key-tile{
         width: 30px;
-
     }
+
+    .play{
+        display: none;
+    }
+
     .enter-key-tile{
         width: 64px;
     }
